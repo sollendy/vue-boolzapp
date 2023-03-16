@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uotsapp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="omnia-cont" id="app">
+        <div id="superficie">
+            <div id="green-bar">
+            </div>
+            <div id="app-cont">
+                <div id="left-side">
+                    <div id="top-left">
+                        <nav class="d-flex align-items-center" id="upper-nav-left">
+                            <div class="d-flex align-items-center gap-2 ps-2" id="profilo-utente">
+                                <img src="img/avatar_io.jpg" alt="avatar">
+                                <p>Sofia</p>
+                            </div>
+                            <div id="icone-utente">
+                                <span>
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                </span>
+                                <span class="px-2">
+                                    <i class="fa-solid fa-message"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </span>
+                            </div>
+                        </nav>
+                        <div class="d-flex gap-3" id="casella-blu">
+                            <div id="cut-bell">
+                                <i class="fs-5 fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="d-flex flex-column" id="casella-blu-text">
+                                <p class="pt-3">Ricevi notifiche di nuovi messagi</p>
+                                <p><a href="#">Attiva notifiche desktop</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="barra-ricerca">
+                        <input class="form-control" type="text" placeholder="         Cerca o inizia una nuova chat" aria-label="">
+                    </div>
+                    <div id="contatti">
+                        <ul>
+                            <li v-for="(chat, indice) in contacts">
+                                <img :src="chat.avatar" alt="avatar">
+                                <span>
+                                    <b>{{chat.name}}</b>
+                                    <p>Ultimo messaggio inviato</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
