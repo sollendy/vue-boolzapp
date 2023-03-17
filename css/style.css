@@ -167,3 +167,17 @@
     text-align: end;
     padding-right: 10px;
 }
+
+#input-utente {
+    width: 100%;
+    height: 57px;
+    background-color: rgb(243, 238, 234);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: grey;
+}
+
+#user-type-zone {
+    width: 90%;
+}
