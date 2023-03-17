@@ -169,6 +169,12 @@ createApp({
             ],
             contactsIndex: 0,
         }
+    },
+
+    methods: {
+        switchActiveIndex(indiceContatto) {
+            this.contactsIndex = indiceContatto;
+        }
     }
 
 }).mount('#app')

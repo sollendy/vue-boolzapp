@@ -49,7 +49,7 @@
                     </div>
                     <div id="contatti">
                         <ul>
-                            <li v-for="(chat, indice) in contacts">
+                            <li v-for="(chat, indice) in contacts" :class="indice = contactsIndex ? 'active' : ''" @click="switchActiveIndex(indice)" >
                                 <img :src="chat.avatar" alt="avatar">
                                 <span>
                                     <b>{{chat.name}}</b>
@@ -83,8 +83,11 @@
                         </nav>
                     </div>
                     <div id="riquadro-chat">
-                        <div v-for="messaggiOne in contacts[contactsIndex].messages" class="messaggio" :class="messaggiOne.status">
+                        <div v-for="messaggiOne in contacts[contactsIndex].messages" class="messaggi" :class="messaggiOne.status">
                             {{messaggiOne.message}}
+                            <div class="ora-messaggio">
+                                {{messaggiOne.date}}
+                            </div>
                         </div>
                         <!-- <div class="messaggi sent">hai canato il porto a spasso?</div>
                         <div class="messaggi sent">hai canato il porto a spasso?</div>
