@@ -14,7 +14,7 @@
         <div id="superficie">
             <div id="green-bar">
             </div>
-            <div id="app-cont">
+            <div class="d-flex" id="app-cont">
                 <div id="left-side">
                     <div id="top-left">
                         <nav class="d-flex align-items-center" id="upper-nav-left">
@@ -22,7 +22,7 @@
                                 <img src="img/avatar_io.jpg" alt="avatar">
                                 <p>Sofia</p>
                             </div>
-                            <div class="d-flex gap-2 pe-3" id="icone-utente">
+                            <div class="d-flex gap-3 pe-3 icone-utente">
                                 <span>
                                     <i class="fa-solid fa-circle-notch"></i>
                                 </span>
@@ -58,6 +58,39 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div id="right-side">
+                    <div id="top-right">
+                        <nav class="d-flex align-items-center justify-content-between" id="upper-nav-right">
+                            <div class="d-flex align-items-center gap-2 ps-2" id="profilo-chat">
+                                <img src="img/avatar_1.jpg" alt="avatar">
+                                <div class="chat-details">
+                                    <p>Michele</p>
+                                    <p>ultimo accesso: fatti gli affaracci tuoi</p>
+                                </div>
+                            </div>
+                            <div class="icone-utente d-flex gap-3 pe-4">
+                                <span>
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-message"></i>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </span>
+                            </div>
+                        </nav>
+                    </div>
+                    <div id="riquadro-chat">
+                        <div v-for="messaggiOne in contacts[contactsIndex].messages" class="messaggio" :class="messaggiOne.status">
+                            {{messaggiOne.message}}
+                        </div>
+                        <!-- <div class="messaggi sent">hai canato il porto a spasso?</div>
+                        <div class="messaggi sent">hai canato il porto a spasso?</div>
+                        <div class="messaggi received">sì sì</div> -->
+                    </div>
+
                 </div>
             </div>
         </div>
