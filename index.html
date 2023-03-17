@@ -98,10 +98,10 @@
                             <i class="fs-4 fa-regular fa-face-smile"></i>
                         </div>
                         <div id="user-type-zone">
-                            <input class="user-message form-control" type="text" placeholder="digita il tuo messaggio">
+                            <input @keyup.enter="addMex()" v-model="newMes" class="user-message form-control" type="text" placeholder="digita il tuo messaggio">
                         </div>
-                        <div id="mic-icon">
-                            <i class="fa-solid fa-microphone"></i>
+                        <div @click="addMex()" id="mic-icon">
+                            <i class="fa-regular fa-paper-plane"></i>
                         </div>
                     </div>
                 </div>

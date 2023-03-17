@@ -168,12 +168,23 @@ createApp({
                 }
             ],
             contactsIndex: 0,
+            newMes: "",
+
         }
     },
-
+    
     methods: {
         switchActiveIndex(indiceContatto) {
             this.contactsIndex = indiceContatto;
+        },
+        
+        addMex() {
+            const newText = {
+                message: this.newMes,
+                status: 'sent'
+            }
+            this.contacts.messages.push(newText);
+            this.newText = "";
         }
     }
 
