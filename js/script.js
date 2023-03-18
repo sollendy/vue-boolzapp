@@ -185,16 +185,17 @@ createApp({
             }
             this.contacts[this.contactsIndex].messages.push(newText);
             this.newMes = "";
-            console.log("hai cliccato bravissimo!");
+            console.log("hai scritto un messaggio, bravissimo!");
+            setTimeout (this.addRis, 1000)
         },
 
         addRis() {
             const newText = {
-                message: this.newMes,
+                message: "ok",
                 status: 'received'
             }
             this.contacts[this.contactsIndex].messages.push(newText);
-            this.newMes = "ok";
+            this.newMes = "";
             console.log("ho perfino risposto!");
         }
     }
