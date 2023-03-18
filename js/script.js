@@ -183,11 +183,20 @@ createApp({
                 message: this.newMes,
                 status: 'sent'
             }
-            this.contacts.messages.push(newText);
-            this.newText = "";
+            this.contacts[this.contactsIndex].messages.push(newText);
+            this.newMes = "";
+            console.log("hai cliccato bravissimo!");
+        },
+
+        addRis() {
+            const newText = {
+                message: this.newMes,
+                status: 'received'
+            }
+            this.contacts[this.contactsIndex].messages.push(newText);
+            this.newMes = "ok";
+            console.log("ho perfino risposto!");
         }
     }
 
 }).mount('#app')
-
-

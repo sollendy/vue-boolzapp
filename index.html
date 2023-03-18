@@ -100,7 +100,7 @@
                         <div id="user-type-zone">
                             <input @keyup.enter="addMex()" v-model="newMes" class="user-message form-control" type="text" placeholder="digita il tuo messaggio">
                         </div>
-                        <div @click="addMex()" id="mic-icon">
+                        <div @click="addMex()" @click="setTimeout(addRis, 1000)" id="mic-icon">
                             <i class="fa-regular fa-paper-plane"></i>
                         </div>
                     </div>
