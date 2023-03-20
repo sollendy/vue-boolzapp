@@ -224,7 +224,7 @@ createApp({
                 } else {
                     contatto.visible = false;
                 }
-
+                
             });
 
         },
