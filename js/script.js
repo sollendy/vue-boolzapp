@@ -224,10 +224,16 @@ createApp({
                 } else {
                     contatto.visible = false;
                 }
-                
+
             });
 
         },
+
+        deleteMex() {
+
+            this.contacts[contactsIndex].messages.splice(contactsIndex, 1)
+
+        }
     }
 
 }).mount('#app')

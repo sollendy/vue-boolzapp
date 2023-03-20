@@ -11,6 +11,7 @@
 }
 
 #app-cont {
+    border: 1px solid black;
     width: 90%;
     height: 77%;
     /* margin: auto; */
@@ -76,7 +77,7 @@
 } */
 
 #contatti ul {
-    height: 474px;
+    height: 472.5px;
     list-style-type: none;
     padding: 0;
     overflow-y: auto;
@@ -144,6 +145,22 @@
     flex-flow: column nowrap;
 }
 
+#mex-cont {
+    position: relative;
+}
+
+#mex-cont .dropdown {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: none;
+    color: grey;
+}
+
+#mex-cont:hover .dropdown {
+display: block;
+}
+
 .messaggi {
     margin: 8px 0;
     padding: 10px 0;
@@ -166,6 +183,8 @@
 .ora-messaggio {
     text-align: end;
     padding-right: 10px;
+    color: grey;
+    font-size: 10px;
 }
 
 #input-utente {

@@ -84,11 +84,18 @@
                         </nav>
                     </div>
                     <div id="riquadro-chat">
-                        <div v-for="messaggiOne in contacts[contactsIndex].messages" class="messaggi" :class="messaggiOne.status">
+                        <div v-for="messaggiOne in contacts[contactsIndex].messages" class="messaggi" :class="messaggiOne.status" id="mex-cont">
                             {{messaggiOne.message}}
                             <div class="ora-messaggio">
                                 {{messaggiOne.date}}
                             </div>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item active" href="#">Azione</a></li>
+                                  <li @click="deleteMex()"><a class="dropdown-item" href="#">Elimina messaggio</a></li>
+                                </ul>
+                              </div>
                         </div>
                         <!-- <div class="messaggi sent">hai canato il porto a spasso?</div>
                         <div class="messaggi sent">hai canato il porto a spasso?</div>
