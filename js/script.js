@@ -173,6 +173,8 @@ createApp({
             newMes: "",
             //creo una variabile per la barra di ricerca contatti
             ricercaUtente: "",
+            //creo una variabile per la risposta automatica 
+            rispostaRapida: "",
 
         }
     },
@@ -182,15 +184,16 @@ createApp({
             this.contactsIndex = indiceContatto;
         },
         
-        addMex() {
+        addMex(index) {
+            this.rispostaRapida = index;
             const newText = {
                 message: this.newMes,
                 status: 'sent'
             }
-            this.contacts[this.contactsIndex].messages.push(newText);
+            this.contacts[this.rispostaRapida].messages.push(newText);
             this.newMes = "";
-            console.log("hai scritto un messaggio, bravissimo!");
             setTimeout (this.addRis, 1000)
+            //console.log("hai scritto un messaggio, bravissimo!");
         },
 
         addRis() {
@@ -198,9 +201,9 @@ createApp({
                 message: "ok",
                 status: 'received'
             }
-            this.contacts[this.contactsIndex].messages.push(newText);
+            this.contacts[this.rispostaRapida].messages.push(newText);
             this.newMes = "";
-            console.log("ho perfino risposto!");
+            //console.log("ho perfino risposto!");
         },
 
         //creo la funzione addetta a filtrare i contatti in base alla ricerca
