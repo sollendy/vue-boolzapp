@@ -45,11 +45,12 @@
                         </div>
                     </div>
                     <div id="barra-ricerca">
-                        <input class="form-control" type="text" placeholder="         Cerca o inizia una nuova chat" aria-label="">
+                        
+                        <input v-model="ricercaUtente" @keyup="ricercaContatto()" class="form-control" type="text" placeholder="         Cerca o inizia una nuova chat" aria-label="">
                     </div>
                     <div id="contatti">
                         <ul>
-                            <li v-for="(chat, indice) in contacts" :class="indice === contactsIndex ? 'active' : ''" @click="switchActiveIndex(indice)" >
+                            <li v-for="(chat, indice) in contacts" v-show="chat.visible" :class="indice === contactsIndex ? 'active' : ''" @click="switchActiveIndex(indice)" >
                                 <img :src="chat.avatar" alt="avatar">
                                 <span>
                                     <b>{{chat.name}}</b>
@@ -63,9 +64,9 @@
                     <div id="top-right">
                         <nav class="d-flex align-items-center justify-content-between" id="upper-nav-right">
                             <div class="d-flex align-items-center gap-2 ps-2" id="profilo-chat">
-                                <img src="img/avatar_1.jpg" alt="avatar">
+                                <img :src="contacts[contactsIndex].avatar" alt="avatar">
                                 <div class="chat-details">
-                                    <p>Michele</p>
+                                    <p>{{contacts[contactsIndex].name}}</p>
                                     <p>ultimo accesso: fatti gli affaracci tuoi</p>
                                 </div>
                             </div>

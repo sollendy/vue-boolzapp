@@ -167,8 +167,12 @@ createApp({
                     ],
                 }
             ],
+            //creo un indice per tutti i contatti
             contactsIndex: 0,
+            //creo una variabile per il testo del messaggio dell'utente
             newMes: "",
+            //creo una variabile per la barra di ricerca contatti
+            ricercaUtente: "",
 
         }
     },
@@ -197,7 +201,30 @@ createApp({
             this.contacts[this.contactsIndex].messages.push(newText);
             this.newMes = "";
             console.log("ho perfino risposto!");
-        }
+        },
+
+        //creo la funzione addetta a filtrare i contatti in base alla ricerca
+        ricercaContatto() {
+
+            //ogni contatto verrà ciclato
+            //la stringa digitata dall'utente sarà soggetta a controllo
+            //se il nome del contatto combacia con la stringa, la sua condizione sarà impostata a visibile
+            //ALTRIMENTI 
+            //la sua proprietà verrà messa a false
+
+            this.contacts.forEach(contatto => {
+                //"contatto" rappresenta appunto ogni contatto presente in lista
+                //deve mutare ad ogni iterazione 
+
+                if (contatto.name.toLowerCase().includes(this.ricercaUtente.toLowerCase())) {
+                    contatto.visible = true;
+                } else {
+                    contatto.visible = false;
+                }
+
+            });
+
+        },
     }
 
 }).mount('#app')
