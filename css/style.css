@@ -12,12 +12,12 @@
 
 #app-cont {
     width: 90%;
-    height: 90%;
-    margin: auto;
+    height: 77%;
+    /* margin: auto; */
     position: absolute;
     top: 20px;
     bottom: 20px;
-    left: 0;
+    left: 60px;
     right: 0;
 }
 
@@ -76,7 +76,7 @@
 } */
 
 #contatti ul {
-    height: 594px;
+    height: 474px;
     list-style-type: none;
     padding: 0;
     overflow-y: auto;
